@@ -1,4 +1,4 @@
-#NoEnv
+﻿#NoEnv
 #KeyHistory 0
 #Persistent
 #SingleInstance, Force
@@ -30,7 +30,7 @@ Loop % FileSize {
 		Debug("Making Backup")
 		FileCopy, % Path.folder . Path.file "." Path.ext, % Path.folder . Path.file "_bkp_" A_Now "." Path.ext, 1
 		NumPut(2771332825596005174,RawFile, A_Index - 1, "UInt64")
-		NewFile := FolderPath "F:\Games\Cyberpunk 2077\bin\x64\Cyberpunk2077.exe"
+		NewFile := Path.folder . Path.file "." Path.ext
 		oNewFile := FileOpen(NewFile,"w")
 		oNewFile.RawWrite(RawFile, FileSize)
 		Found := true
