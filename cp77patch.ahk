@@ -5,7 +5,7 @@ ListLines, Off
 Process, Priority, , A
 SetBatchLines, -1
 
-MsgBox, 0x4, CyberPunk 2077 Patch, % "This program will ask for your game's .exe location,`ntry to patch it to fix virtual inputs and`nmake a backup in the same directory.`n`n`nThis may take a minute.`n`nContinue?"
+MsgBox, 0x4, CyberPunk 2077 Patch, % "This program will ask for your game's .exe location,`ntry to patch it to fix virtual inputs and make a backup`nin the same folder.`n`n`nThis may take a minute.`n`nContinue?"
 IfMsgBox, No
 	ExitApp
 
