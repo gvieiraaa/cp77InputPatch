@@ -25,8 +25,6 @@ NumPut(0x2675C0855424448B, b, 0, "UInt64")
 
 Loop % FileSize {
 	if (DllCall("ntdll.dll\RtlCompareMemory", "ptr", &RawFile + (A_Index-1), "ptr", &b, "UInt64", 8) == 8) {
-		Debug("Found at " A_Index)
-		Debug("Making Backup")
 		FileCopy, % Path.folder . Path.file "." Path.ext, % Path.folder . Path.file "_bkp_" A_Now "." Path.ext, 1
 		NumPut(0x2675C08590078B36,RawFile, A_Index - 1, "UInt64")
 		NewFile := Path.folder . Path.file "." Path.ext
